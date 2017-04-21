@@ -4,7 +4,7 @@
   "description": "My résumé",
   "main": " ",
   "scripts": {
-    "test": ""
+    "test": "/bin/true"
   },
   "keywords": [
     "resume",
