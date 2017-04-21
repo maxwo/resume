@@ -21,3 +21,11 @@ after_success:
   - docker build -t $REPO:$TRAVIS_COMMIT .
   - docker tag $REPO:$TRAVIS_COMMIT $REPO:$TAG
   - docker push $REPO
+
+deploy:
+  provider: pages
+  local_dir: dist
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
