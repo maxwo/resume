@@ -4,7 +4,8 @@
   "description": "My résumé",
   "main": " ",
   "scripts": {
-    "test": "/bin/true"
+    "test": "/bin/true",
+    "build": "gulp build"
   },
   "keywords": [
     "resume",

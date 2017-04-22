@@ -12,7 +12,7 @@ services:
 
 before_script:
   - npm install -g gulp
-  - gulp build
+  - npm run build
 
 after_success:
   - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
@@ -24,6 +24,8 @@ after_success:
 deploy:
   provider: pages
   local_dir: dist
+  repo: maxwo/maxwo.github.io
+  target_branch: master
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   on:
