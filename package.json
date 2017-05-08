@@ -20,6 +20,11 @@
   "license": "MIT",
   "devDependencies": {
     "bootstrap-sass": "^3.3.6",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.0.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.0.0",
     "gulp-html-pdf": "^0.3.0",
