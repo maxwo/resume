@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - "7"
 
 env:
   global:
@@ -9,7 +11,7 @@ services:
   - docker
 
 before_script:
-  - npm install -g gulp
+  - npm install -g gulp yarn
   - npm run build
 
 after_success:
