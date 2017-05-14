@@ -6,8 +6,8 @@ const connect = require('gulp-connect');
 const html2pdf = require('gulp-html2pdf');
 const argv = require('yargs').argv;
 
-gulp.task('pdf',
-  () => gulp
+gulp.task('pdf', () =>
+  gulp
     .src('./*.html')
     .pipe(html2pdf({
       printMediaType: true,
@@ -59,9 +59,7 @@ gulp.task('connect', () =>
 gulp.task('build', ['styles', 'templates', 'images']);
 
 gulp.task('default', [
-  'styles',
-  'templates',
-  'images',
+  'build',
   'watchStyles',
   'watchTemplates',
   'connect',
