@@ -20,6 +20,14 @@ deploy:
   - provider: script
     skip_cleanup: true
     script: ci/travis/docker_deploy.sh
+    on:
+      tags: true
+
+  - provider: script
+    skip_cleanup: true
+    script: ci/travis/docker_deploy.sh
+    on:
+      all_branches: true
 
   - provider: pages
     skip_cleanup: true
