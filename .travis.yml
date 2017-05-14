@@ -16,7 +16,7 @@ before_script:
 
 deploy:
   - provider: script
-    script: sh -c $(curl -fsSL https://raw.githubusercontent.com/maxwo/ci/master/travis/docker_deploy.sh)
+    script: source <(curl -fsSL https://raw.githubusercontent.com/maxwo/ci/master/travis/docker_deploy.sh)
   - provider: pages
     local_dir: dist
     repo: maxwo/maxwo.github.io
