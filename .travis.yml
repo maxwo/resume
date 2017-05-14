@@ -13,8 +13,8 @@ services:
 before_script:
   - npm run build
 
-before_deploy:
-  - git clone https://github.com/maxwo/ci.git || true
+after_success:
+  - wget https://github.com/maxwo/ci/releases/download/0.1.0/ci-0.1.0.tar.gz -O - | tar -xz
 
 deploy:
   - provider: script
