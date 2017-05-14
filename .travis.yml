@@ -11,17 +11,20 @@ services:
   - docker
 
 before_script:
-  - npm install -g gulp yarn
   - npm run build
+
+before_deploy:
+  - git clone https://github.com/maxwo/ci.git
 
 deploy:
   - provider: script
-    script: bash <(curl -fsSL https://raw.githubusercontent.com/maxwo/ci/master/travis/docker_deploy.sh)
+    skip_cleanup: true
+    script: ci/travis/docker_deploy.sh
   - provider: pages
+    skip_cleanup: true
     local_dir: dist
     repo: maxwo/maxwo.github.io
     target_branch: master
-    skip_cleanup: true
     github_token: $GITHUB_TOKEN
     on:
       branch: master
