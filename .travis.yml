@@ -14,12 +14,13 @@ before_script:
   - npm run build
 
 before_deploy:
-  - git clone https://github.com/maxwo/ci.git
+  - git clone https://github.com/maxwo/ci.git || true
 
 deploy:
   - provider: script
     skip_cleanup: true
     script: ci/travis/docker_deploy.sh
+
   - provider: pages
     skip_cleanup: true
     local_dir: dist
