@@ -91,8 +91,34 @@ h3 {
     }
 
     .languages,
-    .hobbies {
+    .hobbies,
+    .conferences,
+    .formation {
         margin-top: 14.3em;
+    }
+
+
+
+
+    dl.formations {
+        @extend .dl-horizontal;
+
+        margin-left: -6.5em;
+
+        dt, dd {
+            padding-top: 1.5em;
+        }
+
+        dd {
+            font-family: $font-family-content;
+            font-weight: lighter;
+            font-size: 0.9em;
+            line-height: 1.6em;
+
+            .location {
+                font-weight: bolder;
+            }
+        }
     }
 
 }
@@ -133,26 +159,12 @@ h3 {
             line-height: 0.5em;
         }
 
-    }
-
-
-    dl.formation {
-        @extend .dl-horizontal;
-
-        dt, dd {
-            padding-top: 1.5em;
-        }
-
-        dd {
+        p {
             font-family: $font-family-content;
-            font-weight: lighter;
             font-size: 0.9em;
-            line-height: 1.6em;
-
-            .location {
-                font-weight: bolder;
-            }
+            font-weight: 300;
         }
+
     }
 }
 
