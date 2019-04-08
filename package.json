@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "My résumé",
   "main": " ",
   "scripts": {
@@ -17,18 +17,15 @@
     "url": "git://github.com/maxwo/resume.git"
   },
   "author": "Maxime Wojtczak",
-  "license": "MIT",
+  "license": "Does is matter there?",
   "devDependencies": {
-    "bootstrap-sass": "^3.3.6",
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "bootstrap-scss": "^4.3.1",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.0.0",
-    "gulp-html-pdf": "^0.3.0",
-    "gulp-html2pdf": "^0.1.3",
-    "gulp-jade": "^1.1.0",
-    "gulp-metalsmith": "^1.1.0",
+    "gulp-pug": "^4.0.1",
     "gulp-sass": "^2.3.1",
-    "gulp-util": "^3.0.7",
-    "underscore": "^1.8.3",
-    "yargs": "^4.7.1"
-  }
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {}
 }
