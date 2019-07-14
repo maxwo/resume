@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const util = require('gulp-util');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const connect = require('gulp-connect');
@@ -13,7 +12,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('templates', function() {
-  return gulp.src('./templates/*.pug').pipe(pug().on('error', util.log)).pipe(gulp.dest('./dist/')).pipe(connect.reload());
+  return gulp.src('./templates/*.pug').pipe(pug().on('error', console.log)).pipe(gulp.dest('./dist/')).pipe(connect.reload());
 });
 
 gulp.task('images', function() {
@@ -21,24 +20,24 @@ gulp.task('images', function() {
 });
 
 gulp.task('watchStyles', function() {
-  gulp.watch('./scss/**/*.scss', ['styles']);
+  gulp.watch('./scss/**/*.scss', gulp.series('styles'));
 });
 
 gulp.task('watchTemplates', function() {
-  gulp.watch('./templates/**/*.pug', ['templates']);
+  gulp.watch('./templates/**/*.pug', gulp.series('templates'));
 });
 
 gulp.task('connect', function() {
   connect.server({root: './dist/', port: 8081, livereload: true});
 });
 
-gulp.task('build', ['styles', 'templates', 'images']);
+gulp.task('build', gulp.parallel('styles', 'templates', 'images'));
 
-gulp.task('default', [
+gulp.task('default', gulp.parallel(
   'styles',
   'templates',
   'images',
   'watchStyles',
   'watchTemplates',
   'connect'
-]);
+));

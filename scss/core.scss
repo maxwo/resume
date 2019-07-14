@@ -109,8 +109,16 @@ h3 {
     @extend .row;
 }
 
-.july-2016, .conferences {
-    padding-top: 4em;
+.conferences {
+    padding-top: 3em;
+}
+
+.zenika {
+    margin-bottom: 11em;
+}
+
+.worldline {
+    padding-top: 3.5em;
 }
 
 #technical-competences {
@@ -218,7 +226,7 @@ h3 {
       background-image: url("/images/worldline.png");
       background-repeat: no-repeat;
       background-size: 2.5em;
-      background-position: -0.1em 0.5em;
+      background-position: -0.1em 4.5em;
 
       h3 {
           padding-top: 0.1em;
