@@ -1,6 +1,6 @@
-FROM nginx:1
+FROM nginx:1.17.4
 
-MAINTAINER Maxime Wojtczak <maxime.wojtczak@zenika.com>
+LABEL maintainter="Maxime Wojtczak <maxime.wojtczak@zenika.com>"
 
 ENV PROJECT resume
 ENV VERSION 0.1.0

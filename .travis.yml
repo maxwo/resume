@@ -4,17 +4,19 @@ node_js:
 
 env:
   global:
-    - secure: "VTBPs/99WNJfxYK4DAQ+8b4nKYI+bfbot0/AnVt7YHNbcvKlAbyQdUEHvMvHax4cyGowVIrRDd3Swleq9ZMDQ6pgVpVdmU9+MR7eLwVKufv24EItH335MgNVxDty61kYmETDajvfACZk6RkXINOC+6fT8BQSXS8ECjBrgvyFRlDmAHPO6vXG1+xgdZlxdZNZ33nbsYj0OEgcxmhMBldFPha5O2fDg5EMIPMoKPMGWsV1y5JsG1xZRNbJWD1qHOMeKrUK3WTdI0+R+jnWlp76F5BVOJScE9SiHpuOUGSCvOSKPyutL3BAY8Z2wZB6wljWIpjOWD424/2AZyNhD12+HHSIWrwRasWUb2/TjdxBfFe5rpx+TyKEes8uCHkdh5bQVwHPeQDoKTfwCZqGTrNFOcgzI8pXJI4Nf58BlUFJeGAsA9zvto8WTfgo4rTXF2jtI5WWZCwqIwBG7esgC+PtkTSMzCh+y42cteZ+GP1sMYT7c6XtEY+vbnd7wxtkN98/WMRq9RjMnQbcgq9uF/VvZYlIZ2sS4F7ydy8W8BH7EV5BqbVxuUyElsZIZMUiqy/IB8cPGpSQh8ULLQTEF8Nv6wJtrS0rSpaCG2us/qRXwn4lDjzaelgQN2/6+eefF0Si+0AjvtvMeXrgQWZgtbiFFe+v6dUet35gXD0HmH1YoTo="
-    - secure: "h/Npxv4y5KAax1nmva2YZUTv0ZgTr5EO3rLs6hVZUed+ufPb5AVBHkKTzsk2tZ2hWtztTVjr21tcg64AypSdM44nRCd+C6aQTUMtiDpXEHgQUESlaLftaMixQibAVK/Gjvn4Ph3NSOWSX8jVgVxC7IJ2Y7HWJHXGHz9NqDaLXn11tI16MWxo/9ulq4F1/vE2epnme2HtVk39OostenrtbjGvZWRW1EEOptNGUOWfSbyz5E6p1uq1kram8wrtwY4U2aiQHKY5eimvkwqYwpr10sfCfqIyNxk9uCFdtdtI1qCJnpWZJ9NrUqaKIAZyTI3Kp+msRJuwkuqohYoT7nTzescO9bcEzbFkcngLQTKUdMyL6nIMMmO2k3PkrfwU78ieGRWyd+JKdkNJXIhywbeU+IT/0Hea2ti8ZGW/mIysSJO886JJ90u7A9sXyedZRLezVyu3c7lOjpzItY9tNtMpRbvMzWGEhsawSOvOTPVIUI2GOS1enL9bcwJ+PH9nTD75gTgUB2EUjYzPcfzqN2YCjU5cdhxV9cZMHkIFr8j4kPRXtr5eo9Td82SHzhQJKJ7HbBKas/+4F14SZtagDNV+i0NK6VaWTOXzXPjGkhZCdrouxmHyVlYTj45B4fpbcphSaWGjxhYCLe2GyaxJO5Y9XaUoy8e7TOMKC5nh0wQuvco="
+    # GITHUB_TOKEN
+    - secure: "TlGoMax68mpZLcnNgW/c9uN8qS0XRtNBmXbbCmbYH3zq6uw3s9fi3yR87XLwITEeFKY9oa8ijDNnZsTJXBJdYaPMmGsc2Pnz98deX4J51SflrDZp4eta5LJocIA2O0FYa8rABJaTwtSwkEZt79+P9v8UFxk+64xDWJHcUbpOgKsIhM4DRxLnwkQcer62mmP3xJbD/lvetmrekcKmWZgNeW8sIyXCYAJeMkgKmwtXKwWeiQnFiyBl5/qaMuW2+HSusCDzUPd2ZssRp793JTrieX7tm38ipn/YD02Nn2cEsF17GfTDXGQGUjpJgey52N3c44a9kFhU90y4rsbBFHYpkEFiz9CL9OnpBnmnnKi46cn6RBbBtXd5oaJaNHjwRA9VsDN2OJtud9qIUznEZ0+y4Wn5U0XNgYcnojvBptFxs2QDVOZmvoyXfhZpo2ynf2gltwc/ZWUYIRkkOft6f5sk9JEymhTcLdS0OKbhibGSgO3UZboK1+xtpbyhYK5RIFaPwSMEFHsS9ozUil4nU9+Vla8n/9FKsl0cJMwrlNcKCMJ+t065xW0gk+gdB5oTALib7p8eV/j9+nvSZvZhqxhVFUwsA3OaOONhoYPQ8e00InQBjmOb6n47XgLVt+izs8Ft+XhU2nb55m17eFzJ9S9zihqOAVzjA4uJRJv3nfYQfX0="
+    # DOCKER_PASSWORD
+    - secure: "IsYUu3uHTTJQDoW8kZLlEE7bX5CqX0oZoSpTHqs5hlLMNvcYJ6r2nfONZ1ZnNgYf6RP2Q0tLpU9SJsSA88X7Bf+I4nkLipHo4762VN/Djm8GGNcN2GK0WjTixdkcpaXAwRCUKV6SWsMvlWxdw2TnntUGl9VtCj0KsY3fvh5g1KMv80YcIpi61fpbV5ajVH7BQwGjGU136NKYwa56UzD8KNGwK2R3kijAIn37cr2e+uu9LuW1+gvQrAn+q0+x5mpsGdAuXnOgdyEPa0y4TXrLJTkvdbfV1KEECdaRSQZpTjzxbkSqaQPL9vUq1/hgJUzjJUiNZNWQzLYnHc5h1tgWNQJ5wQ+hhGkPSg4PRdIg5JHHvOGNbu2ddgz+HEVqvr9j6EhXe7tGYBBsqxVUPTnG8QEPNBcl4y+DmRxSqEZIcfIpvXcjQG8jkbFQvqbRnSWjooZRUvLgsOI+xmgmQZkE+LjBzOYTiBMdkTcFaxMNnJta4e9Zh6LctKMUwXzNzJmYkkJA89BY4rvOLTtiekoDBH0eVMLZAcXr8Wly3ARdIC/RR5Gmy8gXOcozn2rDwwUJx759dfPtZjdnQMpepTuvSNim1ppw9Eup9Ax1fMYOSIHgPiTf6i5Zb/W0zQSUO9gjSWoR5wSeKw9arJ8JHlckIJWK1Xo/uutxBuWRXDeh6rI="
 
 services:
   - docker
 
 before_script:
-  - npm run build
-
-after_success:
   - wget https://github.com/maxwo/ci/releases/download/0.1.0/ci-0.1.0-sources.tar.gz -O - | tar -xz
+
+script:
+  - npm run build
 
 deploy:
   - provider: script
@@ -22,11 +24,6 @@ deploy:
     script: ci/travis/docker_deploy.sh
     on:
       tags: true
-
-  - provider: script
-    skip_cleanup: true
-    script: ci/travis/docker_deploy.sh
-    on:
       all_branches: true
 
   - provider: pages
