@@ -8,8 +8,8 @@ $font-family-details: 'Lato', sans-serif;
 // #03396c
 // #005b96
 // #c30101
-$popup-color: #c30101;
-$popup-darker-color: darken($popup-color, 0.3);
+$popup-color: #c30101 !default;
+$popup-darker-color: darken($popup-color, 0.3) !default;
 
 .container::before {
     z-index: 0-1;
@@ -21,7 +21,7 @@ $popup-darker-color: darken($popup-color, 0.3);
     background-image: url("/images/background.jpg");
     background-repeat: repeat-x;
     background-size: 1500px;
-    opacity: 0.03;
+    opacity: 0.02;
 }
 
 .container {
@@ -114,15 +114,7 @@ h3 {
 }
 
 .conferences {
-    padding-top: 3.6em;
-}
-
-.zenika {
-    margin-bottom: 11em;
-}
-
-.worldline {
-    padding-top: 3.9em;
+    padding-top: 11em;
 }
 
 #technical-competences {
@@ -175,6 +167,7 @@ h3 {
         height: 2.2em;
         border-radius: 1.1em;
     }
+    
     .progress-bar {
         background-color: $popup-darker-color;
         font-size: 1em;
@@ -207,6 +200,14 @@ h3 {
         }
     }
 
+    .interests {
+        font-size: 1em;
+    }
+
+}
+
+.experience-pagebreak {
+  padding-top: 5.5em;
 }
 
 #experience {
@@ -230,7 +231,7 @@ h3 {
       background-image: url("/images/worldline.png");
       background-repeat: no-repeat;
       background-size: 2.5em;
-      background-position: -0.1em 4.4em;
+      background-position: -0.1em 0.5em;
 
       h3 {
           padding-top: 0.1em;
@@ -267,8 +268,8 @@ h3 {
         }
 
         ul {
-            margin: 0.5em 0;
-            padding: 0 2em;
+            margin: 0.1em 0 0.3em 0;
+            padding: 0 0 0 2em;
         }
 
         li {
@@ -283,7 +284,15 @@ h3 {
             font-family: $font-family-details;
             font-size: 1em;
             font-weight: 300;
-            margin: 0;
+            margin: .2em 0;
+            
+        }
+
+        .short-description {
+            margin-top: 0.4em;
+            font-family: $font-family-details;
+            font-size: 0.9em;
+            font-weight: 500;
         }
 
     }

@@ -28,7 +28,7 @@ gulp.task('watchTemplates', function() {
 });
 
 gulp.task('connect', function() {
-  connect.server({root: './dist/', port: 8081, livereload: true});
+  connect.server({root: './dist/', port: 8082, livereload: true});
 });
 
 gulp.task('build', gulp.parallel('styles', 'templates', 'images'));
