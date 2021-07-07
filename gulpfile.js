@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const connect = require('gulp-connect');
 
 gulp.task('pdf', function() {
