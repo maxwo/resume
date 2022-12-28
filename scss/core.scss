@@ -1,9 +1,9 @@
-@import './node_modules/bootstrap-scss/bootstrap.scss';
+@import "./node_modules/bootstrap-scss/bootstrap.scss";
 @import url(https://fonts.googleapis.com/css?family=Cinzel:400,700|Lato:300,400,700|News+Cycle:400,700);
 
-$font-family-headers: 'Cinzel', serif;
-$font-family-content: 'News Cycle', sans-serif;
-$font-family-details: 'Lato', sans-serif;
+$font-family-headers: "Cinzel", serif;
+$font-family-content: "News Cycle", sans-serif;
+$font-family-details: "Lato", sans-serif;
 
 // #03396c
 // #005b96
@@ -11,290 +11,325 @@ $font-family-details: 'Lato', sans-serif;
 $popup-color: #c30101 !default;
 $popup-darker-color: darken($popup-color, 0.3) !default;
 
+@media print {
+  #competences-list {
+    margin-bottom: 18em !important;
+  }
+
+  .conferences {
+    padding-top: 2em;
+  }
+
+  .experience-pagebreak {
+    margin-top: 5.5em;
+    height: 2em;
+
+    background-position: 3em 0;
+  }
+}
+
 .container::before {
-    z-index: 0-1;
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/images/background.jpg");
-    background-repeat: repeat-x;
-    background-size: 1500px;
-    opacity: 0.02;
+  z-index: 0-1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/background.jpg");
+  background-repeat: repeat-x;
+  background-size: 1500px;
+  opacity: 0.02;
 }
 
 .container {
-    width: 1000px;
-    font-family: $font-family-content;
-    font-weight: 100;
+  width: 100%;
+  font-family: $font-family-content;
+  font-weight: 100;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: capitalize;
 }
 
 #welcome {
-
-    .content p {
-        width: 400px;
-        margin: 3em auto;
-        font-family: $font-family-content;
-        font-size: 1.5em;
-        font-weight: 400;
-        line-height: 1.1em;
-    }
-
+  .content p {
+    width: 400px;
+    margin: 3em auto;
+    font-family: $font-family-content;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.1em;
+  }
 }
 
 #resume {
-    @extend .row;
+  @extend .row;
 }
 
 .header {
-    @extend .row;
+  @extend .row;
 
-    padding: 2.5em 0 1em 0;
+  padding: 2.5em 0 1em 0;
 
-    h1 {
-        font-family: $font-family-headers;
-        font-size: 3.5em;
+  h1 {
+    font-family: $font-family-headers;
+    font-size: 3.5em;
+  }
+
+  div.description {
+    margin-top: 1em;
+    font-size: 1.3em;
+  }
+
+  #photograph {
+    img {
+      border-radius: 50%;
+      width: 200px;
     }
+    text-align: right;
+  }
 
-    div.description {
-      margin-top: 1em;
-      font-size: 1.3em;
-    }
+  .contact {
+    width: 100%;
+    margin: 1em 0;
 
-    #photograph {
-        img {
-            border-radius:50%;
-            width: 200px;
-        }
-        text-align: right;
-    }
+    dl {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
 
-    .contact {
-        @extend .list-inline;
-        dd, dt {
-          @extend .list-inline-item;
-          font-size: 1.1em;
+      dt {
+        color: $popup-darker-color;
+        vertical-align: bottom;
+        text-align: center;
+        vertical-align: center;
+        padding: 0.2em 0.5em 0 0;
+        flex-grow: 0;
+        margin: 0;
+        font-size: 1.3em;
+      }
+
+      dd {
+        font-size: 1.1em;
+        margin: 0 auto 0 0;
+        a {
+          color: #212529;
+          text-decoration: none;
         }
-        dt {
-            color: $popup-darker-color;
-            margin-right: 0.3em !important;
-        }
-        dd {
-            padding-right: 1.8em;
-            a {
-                color: #212529;
-                text-decoration: none;
-            }
-        }
-        margin: 1em 0;
+      }
+
+      dd:last-child {
+        margin: 0;
+      }
     }
+  }
 }
 
 h2 {
-    font-family: $font-family-headers;
-    font-size: 1.8em;
-    text-align: center;
-    margin-bottom:1em;
-    font-weight: 500;
+  font-family: $font-family-headers;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-weight: 500;
 }
 
-
 h3 {
-    font-family: $font-family-headers;
-    font-size: 1.5em;
+  font-family: $font-family-headers;
+  font-size: 1.5em;
 }
 
 #resume {
-    @extend .row;
-}
-
-.conferences {
-    padding-top: 11em;
+  @extend .row;
 }
 
 #technical-competences {
-    @extend .col-5;
-    padding-right: 0;
+  @extend .col-4;
+  padding-right: 0;
+  p {
+    span,
+    strong {
+      display: inline-block;
+      padding: 0.4em 0.8em;
+      margin: 0.2em;
+      background: $popup-color;
+      border-radius: 0.5em;
+      color: #eee;
+      font-family: $font-family-details;
+    }
+    strong {
+      font-weight: 900;
+      color: #eee;
+    }
+    font-family: $font-family-content;
+    font-size: 0.8em;
+    font-weight: 400;
+    margin-bottom: 3em;
+  }
+
+  h3 {
+    font-family: $font-family-headers;
+    font-size: 1.15em;
+    font-weight: 700;
+  }
+
+  .languages,
+  .hobbies,
+  .conferences,
+  .formation {
+    margin-top: 0em;
+  }
+
+  .languages {
     p {
-        span, strong {
-            display: inline-block;
-            padding: 0.4em 0.8em;
-            margin: 0.25em;
-            background: $popup-color;
-            border-radius: 0.5em;
-            color: #eee;
-            font-family: $font-family-details;
-        }
-        strong {
-            font-weight: 900;
-            color: #eee;
-        }
-        font-family: $font-family-content;
-        font-size: 0.85em;
-        font-weight: 400;
-        margin-bottom: 3em;
+      line-height: 2.2em;
+      margin: 0;
+      font-size: 1em;
+      font-weight: 700;
+    }
+    padding-bottom: 3em;
+  }
+
+  .progress {
+    height: 2.2em;
+    border-radius: 1.1em;
+  }
+
+  .progress-bar {
+    background-color: $popup-darker-color;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  dl.formations {
+    @extend .list-inline;
+
+    dt,
+    dd {
+      @extend .list-inline-item;
     }
 
-    h3 {
-        font-family: $font-family-headers;
-        font-size: 1.15em;
-        font-weight: 700
+    dt {
+      display: block;
+      font-weight: lighter;
+      font-size: 0.8em;
     }
 
-    .languages,
-    .hobbies,
-    .conferences,
-    .formation {
-        margin-top: 0em;
+    dd {
+      display: block;
+      font-family: $font-family-content;
+      font-weight: lighter;
+      font-size: 1em;
+      line-height: 1.6em;
+
+      .location {
+        font-weight: bolder;
+        color: #666;
+      }
     }
+  }
 
-    .languages {
-        p {
-            line-height: 2.2em;
-            margin: 0;
-            font-size: 1em;
-            font-weight: 700;
-        }
-        padding-bottom: 3em;
-    }
-
-    .progress {
-        height: 2.2em;
-        border-radius: 1.1em;
-    }
-    
-    .progress-bar {
-        background-color: $popup-darker-color;
-        font-size: 1em;
-        font-weight: 700;
-    }
-
-    dl.formations {
-        @extend .list-inline;
-
-        dt, dd {
-            @extend .list-inline-item;
-        }
-
-        dt {
-            display: block;
-            font-weight: lighter;
-            font-size: 0.8em;
-        }
-
-        dd {
-            display: block;
-            font-family: $font-family-content;
-            font-weight: lighter;
-            font-size: 1em;
-            line-height: 1.6em;
-
-            .location {
-                font-weight: bolder;
-                color: #666;
-            }
-        }
-    }
-
-    .interests {
-        font-size: 1em;
-    }
-
-}
-
-.experience-pagebreak {
-  padding-top: 5.5em;
+  .interests {
+    font-size: 1em;
+  }
 }
 
 #experience {
-    @extend .col-7;
-    padding-left: 0;
+  @extend .col-8;
+  padding-left: 0;
 
+  .exotec {
+    background-image: url("/images/exotec.png");
+    background-repeat: no-repeat;
+    background-size: 1.9em;
+    background-position: 0 0;
 
-    .zenika {
-      background-image: url("/images/zenika.png");
-      background-repeat: no-repeat;
-      background-size: 1.8em;
-      background-position: 0 0;
+    h3 {
+      padding-top: 0.1em;
+      padding-left: 1.6em;
+    }
+  }
 
-      h3 {
-          padding-top: 0.1em;
-          padding-left: 1.5em;
-      }
+  .zenika {
+    background-image: url("/images/zenika.png");
+    background-repeat: no-repeat;
+    background-size: 1.8em;
+    background-position: 0 0;
+
+    h3 {
+      padding-top: 0.1em;
+      padding-left: 1.5em;
+    }
+  }
+
+  .worldline {
+    background-image: url("/images/worldline.png");
+    background-repeat: no-repeat;
+    background-size: 2.5em;
+    background-position: -0.1em 0.5em;
+
+    h3 {
+      padding-top: 0.1em;
+      padding-left: 1.7em;
+    }
+  }
+
+  .atos {
+    background-image: url("/images/atosworldline.jpg");
+    background-repeat: no-repeat;
+    background-size: 3em;
+    background-position: -0.3em 0.1em;
+
+    h3 {
+      padding-top: 0.15em;
+      padding-left: 1.8em;
+    }
+  }
+
+  .experience {
+    margin: 1.5em 0;
+
+    span {
+      font-family: $font-family-content;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #666;
     }
 
-    .worldline {
-      background-image: url("/images/worldline.png");
-      background-repeat: no-repeat;
-      background-size: 2.5em;
-      background-position: -0.1em 0.5em;
-
-      h3 {
-          padding-top: 0.1em;
-          padding-left: 1.7em;
-      }
+    h5 {
+      font-weight: bold;
+      font-size: 1.2em;
     }
 
-    .atos {
-      background-image: url("/images/atosworldline.jpg");
-      background-repeat: no-repeat;
-      background-size: 3em;
-      background-position: -0.3em 0.1em;
-
-      h3 {
-          padding-top: 0.15em;
-          padding-left: 1.8em;
-      }
+    ul {
+      margin: 0.1em 0 0.3em 0;
+      padding: 0 0 0 2em;
     }
 
-    .experience {
-
-        margin: 1.5em 0;
-
-        span {
-            font-family: $font-family-content;
-            font-size: 0.9em;
-            font-weight: 600;
-            color: #666;
-        }
-
-        h5 {
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        ul {
-            margin: 0.1em 0 0.3em 0;
-            padding: 0 0 0 2em;
-        }
-
-        li {
-            font-family: $font-family-details;
-            font-size: 0.9em;
-            font-weight: 500;
-            line-height: 1.4em;
-            margin-bottom: 0em;
-        }
-
-        p {
-            font-family: $font-family-details;
-            font-size: 1em;
-            font-weight: 300;
-            margin: .2em 0;
-            
-        }
-
-        .short-description {
-            margin-top: 0.4em;
-            font-family: $font-family-details;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
+    li {
+      font-family: $font-family-details;
+      font-size: 0.9em;
+      font-weight: 500;
+      line-height: 1.35em;
+      margin-bottom: 0em;
     }
+
+    p {
+      font-family: $font-family-details;
+      font-size: 1em;
+      font-weight: 300;
+      margin: 0.2em 0;
+    }
+
+    .short-description {
+      margin-top: 0.4em;
+      font-family: $font-family-details;
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+  }
 }
